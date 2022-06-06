@@ -1,0 +1,526 @@
+/**
+ * ----------------------------------------
+ * Font Family
+ * ----------------------------------------
+ */
+/**
+ * ----------------------------------------
+ * Font-Weight
+ * ----------------------------------------
+ */
+/**
+ * ----------------------------------------
+ * Colors - Palette
+ * ----------------------------------------
+ */
+ @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+ /**
+  * ----------------------------------------
+  * animation scale
+  * ----------------------------------------
+  */
+ .scale {
+   transform: scale(1);
+   transition: all 500ms ease-in-out; }
+ 
+ .scale:hover {
+   transform: scale(1.3); }
+ 
+ /**
+  * ----------------------------------------
+  * animation viewGallery
+  * ----------------------------------------
+  */
+ .viewGallery {
+   transform: scale(1);
+   transition: all 300ms ease-in-out; }
+ 
+ .viewGallery:hover {
+   transform: scale(1.05);
+   z-index: 100; }
+ 
+ /**
+  * ----------------------------------------
+  * Gradient
+  * ----------------------------------------
+  */
+ .gradiente {
+   background: black;
+   background: linear-gradient(90deg, black 0%, #f10000 65%, red 100%); }
+ 
+ /**
+  * ----------------------------------------
+  * animation tracking-in-contract
+  * ----------------------------------------
+  */
+ @keyframes tracking-in-contract {
+   0% {
+     letter-spacing: 1em;
+     opacity: 0; }
+   40% {
+     opacity: 0.6; }
+   100% {
+     letter-spacing: normal;
+     opacity: 1; } }
+ 
+ .tracking-in-contract {
+   animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both; }
+ 
+ /**
+  * ----------------------------------------
+  * animation rotate-90
+  * ----------------------------------------
+  */
+ @keyframes rotate-90 {
+   0% {
+     transform: rotate(0); }
+   100% {
+     transform: rotate(90deg); } }
+ 
+ .rotate-90 {
+   animation: rotate-90 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+ 
+ .kenburns-bottom {
+   animation: kenburns-bottom 5s ease-out both; }
+ 
+ /**
+  * ----------------------------------------
+  * animation kenburns-bottom
+  * ----------------------------------------
+  */
+ @-webkit-keyframes kenburns-bottom {
+   0% {
+     transform: scale(1) translateY(0);
+     transform-origin: 50% 84%; }
+   100% {
+     transform: scale(1.25) translateY(15px);
+     transform-origin: bottom; } }
+ 
+ @keyframes kenburns-bottom {
+   0% {
+     transform: scale(1) translateY(0);
+     transform-origin: 50% 84%; }
+   100% {
+     transform: scale(1.25) translateY(15px);
+     transform-origin: bottom; } }
+ 
+ /**
+  * ----------------------------------------
+  * Custom Reset
+  * ----------------------------------------
+  */
+ * {
+   margin: 0;
+   padding: 0; }
+ 
+ /*** Remove focus for button, input, select, a ***/
+ button:focus, button:focus-visible, input:focus, input:focus-visible, select:focus, select:focus-visible, a:focus, a:focus-visible {
+   outline: none !important;
+   box-shadow: none !important; }
+ 
+ /*** Hide Arrows From Input Number ***/
+ /* Chrome, Safari, Edge, Opera */
+ input::-webkit-outer-spin-button,
+ input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0; }
+ 
+ /* Firefox */
+ input[type=number] {
+   -moz-appearance: textfield; }
+ 
+ /**
+  * ----------------------------------------
+  * Body - Style
+  * ----------------------------------------
+  */
+ body {
+   color: #FAFAFA;
+   font-style: normal;
+   font-weight: 300;
+   font-size: 1rem;
+   font-family: "Roboto", sans-serif;
+   background-color: #13151e;
+   scrollbar-width: thin;
+   scrollbar-color: #D91A2A #a00000; }
+ 
+ body::-webkit-scrollbar {
+   width: 8px; }
+ 
+ body::-webkit-scrollbar-track {
+   background: #13151e; }
+ 
+ body::-webkit-scrollbar-thumb {
+   background-color: #D91A2A;
+   border-radius: 6px;
+   border: 3px solid #a00000; }
+ 
+ /**
+  * ----------------------------------------
+  * Colors class
+  * ----------------------------------------
+  */
+ .colorPink {
+   color: #D91A2A; }
+ 
+ .colorWhite {
+   color: #FAFAFA; }
+ 
+ /**
+  * ----------------------------------------
+  * Background colors
+  * ----------------------------------------
+  */
+ .bg-red {
+   background-color: #D91A2A; }
+ 
+ .bg-black {
+   background-color: #13151e; }
+ 
+ /**
+  * ----------------------------------------
+  * FONTS - generate fonts class 
+  * ----------------------------------------
+  */
+ /**** FONTS ROBOTO *****/
+ .roboto-thin {
+   font-family: "Roboto", sans-serif;
+   font-weight: 100; }
+ 
+ .roboto-light {
+   font-family: "Roboto", sans-serif;
+   font-weight: 300; }
+ 
+ .roboto-regular {
+   font-family: "Roboto", sans-serif;
+   font-weight: 400; }
+ 
+ .roboto-medium {
+   font-family: "Roboto", sans-serif;
+   font-weight: 500; }
+ 
+ .roboto-bold {
+   font-family: "Roboto", sans-serif;
+   font-weight: 700; }
+ 
+ .roboto-black {
+   font-family: "Roboto", sans-serif;
+   font-weight: 900; }
+ 
+ /**
+  * ----------------------------------------
+  * CUSTOM NAVBAR - Style
+  * ----------------------------------------
+  */
+ .custom_cursor, .navbar-custom, .navbar-custom__brand.navbar-brand, .navbar-custom__brand .navbar-text, .navbar-custom__link--colorGold .nav-item.active .nav-link, .navbar-custom__link--colorGold .nav-item:focus .nav-link, .navbar-custom__link--colorGold .nav-item:hover .nav-link {
+   cursor: url(../assets/icons/cursor.png), auto; }
+ 
+ /* Change background color */
+ .navbar-custom {
+   background-color: #13151e;
+   color: #FAFAFA;
+   font-family: "Roboto", sans-serif; }
+ 
+ /* Change the brand and text color */
+ .navbar-custom__brand.navbar-brand, .navbar-custom__brand .navbar-text {
+   color: #FAFAFA; }
+ 
+ /* Change the link color */
+ .navbar-custom__link .navbar-nav .nav-link {
+   color: #FAFAFA;
+   font-size: 1.2rem; }
+ 
+ /* Change the color of active or hovered links */
+ .navbar-custom__link--colorGold .nav-item.active .nav-link, .navbar-custom__link--colorGold .nav-item:focus .nav-link, .navbar-custom__link--colorGold .nav-item:hover .nav-link {
+   color: #dfc298; }
+ 
+ /* Change the color of toogler */
+ .navbar-custom__toogler.navbar-toggler i {
+   color: #dfc298; }
+ 
+ /**
+  * ----------------------------------------
+  * Banner - Style
+  * ----------------------------------------
+  */
+ .banner {
+   position: relative;
+   background-color: #13151e;
+   color: #D91A2A;
+   width: 100%;
+   overflow: hidden; }
+ 
+ .banner--img {
+   height: 20vh;
+   min-height: 18rem; }
+ 
+ .banner--home {
+   height: 100vh;
+   min-height: 25rem; }
+ 
+ .banner__img {
+   position: absolute;
+   min-width: 100%;
+   min-height: 100%;
+   width: auto;
+   height: auto;
+   z-index: 0; }
+ 
+ .banner__container {
+   position: relative;
+   display: flex;
+   height: 100%;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   text-align: center;
+   z-index: 2; }
+ 
+ .banner__overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-color: black;
+   opacity: 0.3;
+   z-index: 1; }
+ 
+ .banner__overlay--medium {
+   opacity: 0.5; }
+ 
+ .banner__overlay--soft {
+   opacity: 0.2; }
+ 
+ .banner__overlay--hard {
+   opacity: 0.7; }
+ 
+ /**
+  * ----------------------------------------
+  * BACKGROUNDS - generate bg for banners
+  * ----------------------------------------
+  */
+ @media all and (min-width: 320px) {
+   .backgroundBanner {
+     background-image: url("../assets/img/banner-bgImage-extra-small.jpg");
+     background-size: cover;
+     background-position: top;
+     background-repeat: no-repeat; } }
+ 
+ @media all and (min-width: 768px) {
+   .backgroundBanner {
+     background-image: url("../assets/img/banner-bgImage-medium.jpg");
+     background-size: cover;
+     background-position: top;
+     background-repeat: no-repeat; } }
+ 
+ @media all and (min-width: 1024px) {
+   .backgroundBanner {
+     background-image: url("../assets/img/banner-bgImage-large.jpg");
+     background-size: cover;
+     background-position: top;
+     background-repeat: no-repeat; } }
+ 
+ /**
+  * ----------------------------------------
+  * CardDeck - Media Query  
+  * ----------------------------------------
+  */
+ /****  Prevents the carddeck from splitting into 2 lines ****/
+ @media all and (max-width: 906px) {
+   #cardDeckMQ .card-deck {
+     justify-content: center; }
+     #cardDeckMQ .card-deck .card {
+       min-width: 17rem;
+       max-width: 26rem; } }
+ 
+ /**
+  * ----------------------------------------
+  * Home - Style 
+  * ----------------------------------------
+  */
+ .overlay {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   z-index: 2;
+   background-color: #080d15;
+   opacity: .3; }
+ 
+ .logoHome {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   z-index: 3; }
+ 
+ .card-link {
+   font-size: 1.3rem;
+   font-family: "Roboto", sans-serif;
+   font-weight: 600;
+   font-style: italic;
+   border: 2px solid #D91A2A;
+   text-align: center; }
+   .card-link a {
+     text-decoration: none;
+     color: #FAFAFA; }
+     .card-link a:hover {
+       color: #dfc298;
+       border-color: #D91A2A; }
+ 
+ .card-size {
+   min-width: 12rem;
+   max-width: 16rem; }
+ 
+ /**
+  * ----------------------------------------
+  * Menu - Style 
+  * ----------------------------------------
+  */
+ .menu {
+   color: #FAFAFA;
+   background-color: #13151e;
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+   text-align: center; }
+ 
+ .menu__title {
+   font-weight: 700; }
+ 
+ .menu__description {
+   font-family: "Roboto", sans-serif; }
+ 
+ .menu--size {
+   min-width: 12rem;
+   max-width: 16rem; }
+ 
+ .menu--scale img {
+   transform: scale(1);
+   transition: all 300ms ease-in-out; }
+   .menu--scale img:hover {
+     transform: scale(1.05);
+     z-index: 100; }
+ 
+ /**
+  * ----------------------------------------
+  * Events - Style 
+  * ----------------------------------------
+  */
+ .event {
+   background-color: #13151e;
+   color: #FAFAFA;
+   font-size: 1.3rem;
+   font-family: "Roboto", sans-serif; }
+ 
+ .event__title {
+   font-size: 1.8rem;
+   font-family: "Roboto", sans-serif;
+   font-weight: 400; }
+ 
+ .event__info {
+   font-size: 1rem; }
+ 
+ .event__date {
+   min-width: 15rem;
+   max-width: 20rem;
+   font-size: 1.3rem;
+   font-family: "Roboto", sans-serif;
+   font-weight: 600;
+   font-style: italic;
+   border: 2px solid #D91A2A;
+   text-align: center; }
+   .event__date a {
+     text-decoration: none;
+     color: #FAFAFA; }
+     .event__date a:hover {
+       color: #dfc298;
+       border-color: #D91A2A; }
+   .event__date i {
+     padding: 0 0.2em; }
+ 
+ /**
+  * ----------------------------------------
+  * Gallery 
+  * ----------------------------------------
+  */
+ /**** Rotate the close button of the modal ****/
+ .rt90 i:hover {
+   animation: rotate-90 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+ 
+ /**
+  * ----------------------------------------
+  * Footer - Style
+  * ----------------------------------------
+  */
+ .footer {
+   font-family: "Roboto", sans-serif;
+   background-color: #13151e;
+   color: #FAFAFA; }
+   .footer p {
+     margin: 0;
+     padding: 0; }
+ 
+ .footer__schedule {
+   background-color: #a00000; }
+ 
+ .footer__socialMedia {
+   background-color: #a00000;
+   color: #FAFAFA; }
+   .footer__socialMedia a {
+     color: #FAFAFA; }
+     .footer__socialMedia a:hover {
+       color: #dfc298; }
+ 
+ .footer__address {
+   background-color: #a00000;
+   color: #FAFAFA;
+   font-size: 1rem; }
+ 
+ .footer__goUp {
+   background-color: #13151e; }
+   .footer__goUp a {
+     color: #FAFAFA; }
+     .footer__goUp a:hover {
+       color: #dfc298; }
+   .footer__goUp p {
+     font-size: 0.6rem; }
+ 
+ .footer--bgDark {
+   background-color: #13151e; }
+ 
+ .footer--bgGray {
+   background-color: #a00000; }
+ 
+ /**
+  * ----------------------------------------
+  * Button - Style
+  * ----------------------------------------
+  */
+ .button {
+   border: none;
+   color: #FAFAFA;
+   padding: 5px 16px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 1rem;
+   margin: 2px 1px;
+   cursor: pointer; }
+ 
+ .button--hover:hover {
+   border: 2px solid #a00000; }
+ 
+ .button--theme-purple {
+   background: #D91A2A;
+   border-radius: 10px 10px 10px 10px;
+   border: 2px solid transparent; }
+ 
+ /**
+  * ----------------------------------------
+  * Custom radio color. (Pink)
+  * ----------------------------------------
+  */
+ .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+   background-color: #D91A2A;
+   border-color: #D91A2A;
+   box-shadow: none !important; }
+ 

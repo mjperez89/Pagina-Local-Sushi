@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description"
+		content="Restaurant de comida japonesa para disfrutar de la mejor gastronomia japonesa, con los Chef más destacados, te ofrecen una noche inolvidable para compartir.">
+	<meta name="keywords" content="Resto, comida japonesa, sushi, música, noche, bailar, cocktails, fiesta, evento, amigos">
+	<link rel="shortcut icon" href="./assets/icons/favicon.png" type="image/png">
+	<link rel="icon" href="./assets/icons/favicon.png" type="image/png">
+	<link href="./assets/Awesome/css/all.min.css" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.min.css">
+	<title>RESERVACIONES</title>
+</head>
+
+<body>
+	<div class="container-fluid p-0">
+		<!-- HEADER -->
+		<nav class="navbar navbar-expand-lg navbar-custom">
+			<div class="d-flex w-25 order-0">
+				<a class="navbar-brand navbar-custom__brand" href="./index.html">
+					<img class="wow animate__animated animate__fadeInTopLeft animate__faster"
+						src="assets/icons/logo_small.png" alt="Mi Logo">
+				</a>
+			</div>
+			<div class="navbar-collapse collapse justify-content-center order-2 order-lg-1 navbar-custom__link navbar-custom__link--colorGold"
+				id="collapsingNavbar">
+				<ul class="navbar-nav mt-2 mt-lg-0">
+					<li class="nav-item">
+						<a class="nav-link mx-3" href="./menu.html">MENU</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link mx-3" href="./reservations.html">RESERVACIONES</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link mx-3" href="./events.html">EVENTOS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link mx-3" href="./gallery.html">GALERÍA</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link mx-3" href="./contact.html">CONTACTO</a>
+					</li>
+				</ul>
+			</div>
+			<div class="navbar-text w-25 text-right order-1">
+				<button class="navbar-toggler navbar-custom__toogler" type="button" data-toggle="collapse"
+					data-target="#collapsingNavbar" aria-controls="MyMenu" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<i class="fas fa-ellipsis-v "></i>
+				</button>
+			</div>
+		</nav><!-- HEADER END -->
+
+		<div class="banner banner--img container-fluid px-0 backgroundBanner text-center py-5">
+			<!--BANNER -->
+			<div class="banner__overlay banner__overlay--soft"></div>
+			<div class="banner__container w-100">
+				<span class="d-inline-block d-sm-none h1 font-weight-light tracking-in-contract my-3 px-2">
+					RESERVACIONES
+				</span>
+				<span class="d-none d-md-inline-block d-lg-none display-4 tracking-in-contract my-4 px-2">
+					RESERVACIONES
+				</span>
+				<span class="d-none d-lg-inline-block display-3 tracking-in-contract my-5 px-2">
+					RESERVACIONES
+				</span>
+			</div>
+		</div>
+		<!--FIN BANNER -->
+
+		<div class="container p-0 my-4">
+
+			<div class="row offset-2 col-8">
+				<form action="#" method="POST">
+					<p class="h4 font-weight-bold">RESERVAR AHORA</p>
+					<div>
+						<span class="h6 font-weight-bold pr-3">CANTIDAD DE INVITADOS:</span>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="op1" name="RESERVACIONES" class="custom-control-input" checked>
+							<label class="custom-control-label" for="op1">1</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="op2" name="RESERVACIONES" class="custom-control-input">
+							<label class="custom-control-label" for="op2">2</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="op3" name="RESERVACIONES" class="custom-control-input">
+							<label class="custom-control-label" for="op3">3</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<input type="radio" id="op4" name="RESERVACIONES" class="custom-control-input">
+							<label class="custom-control-label" for="op4">4</label>
+						</div>
+					</div>
+					<div>
+						<label class="h6 font-weight-bold mt-4" for="mifecha">SELECCIONE UNA FECHA: </label>
+						<input type="date" name="fecha" id="mifecha" step="1" min="2021-09-01" max="2022-12-31"
+							value="2021-06-09">
+					</div>
+					<div>
+						<select name="horario" class="custom-select my-3">
+							<option selected>Seleccione Horario</option>
+							<option value="10">10 hs</option>
+							<option value="11">11 hs</option>
+							<option value="12">12 hs</option>
+							<option value="13">13 hs</option>
+							<option value="14">14 hs</option>
+							<option value="15">15 hs</option>
+							<option value="16">16 hs</option>
+							<option value="17">17 hs</option>
+							<option value="18">18 hs</option>
+							<option value="19">19 hs</option>
+							<option value="20">20 hs</option>
+							<option value="21">21 hs</option>
+							<option value="22">22 hs</option>
+						</select>
+					</div>
+					<div class="form-group mt-4">
+						<button type="button" class="button button--hover button--theme-purple" data-toggle="modal"
+							data-target="#modalMessage">SOLICITAR RESERVA</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<footer class="footer container-fluid  mx-auto w-100 px-0 text-center">
+
+			<div class="d-flex flex-column flex-md-row">
+
+				<div class="footer__schedule container col-12 col-md-4 col-lg-4 p-4">
+					<div>
+						<p>Días y Horarios</p>
+						<p>Jueves a Domingos</p>
+						<p>20:30 - 00:30</p>
+					</div>
+				</div>
+
+				<div class="footer__socialMedia container col-12 col-md-4 col-lg-4 p-4">
+					<nav>
+						<ul class="list-inline p-2">
+							<li class="list-inline-item"><a href="https://es-la.facebook.com/" target="_blank"
+									rel="noopener noreferrer">
+									<i class="fab fa-facebook fa-2x "></i></a></li>
+							<li class="list-inline-item"><a href="https://www.youtube.com/" target="_blank"
+									rel="noopener noreferrer">
+									<i class="fab fa-youtube fa-2x "></i></a></li>
+							<li class="list-inline-item"><a href="https://www.instagram.com/?hl=es-la" target="_blank"
+									rel="noopener noreferrer">
+									<i class="fab fa-instagram fa-2x "></i></a></li>
+							<li class="list-inline-item"><a
+									href="https://api.whatsapp.com/send/?phone=5493517441616&amp;text&amp;app_absent=0"
+									target="_blank" rel="noopener noreferrer">
+									<i class="fab fa-whatsapp fa-2x "></i></a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="footer__address container col-12 col-md-4 col-lg-4 p-4">
+					<div>
+						<address>
+							<p>Córdoba, Argentina</p>
+							<p>Av. Rafael Nuñez 4560</p>
+							<p>Tel: (351) 432-6990 / (351) 986-7496</p>
+						</address>
+					</div>
+				</div>
+
+			</div>
+			<div class="footer__goUp container col-12 col-md-12 col-lg-12">
+				<div>
+					<div><a href="#"><i class="fas fa-angle-double-up fa-2x p-3"></i></a></div>
+				</div>
+			</div>
+		</footer><!-- FOOTER END -->
+
+		<!-- Modal -->
+		<div class="modal fade" id="modalMessage" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content bg-black">
+					<div class="modal-header bg-red border-bottom-0">
+						<h5 class="modal-title" id="exampleModalLabel">HajimeFood</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body bg-black">
+						<p>Muchas gracias por tu reserva.</p>
+						<p>Te enviaremos un email con la confirmación.</p>
+					</div>
+					<div class="modal-footer bg-black border-top-0">
+						<button type="button" class="button button--theme-purple" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<script src="./jquery/jquery-3.5.1.slim.min.js"></script>
+	<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
