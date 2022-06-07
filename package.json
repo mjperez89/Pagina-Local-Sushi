@@ -1,11 +1,24 @@
 {
-  "name": "sushi",
+  "name": "Projecto-Local-Sushi",
   "version": "1.0.0",
-  "description": "",
+  "description": "Proyecto de desarrollo web de local de Sushi.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass scss/style.scss css/style.css",
+    "compile:sass_min": "node-sass scss/style.scss css/style.min.css --output-style compressed"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjperez89/Pagina-Local-Sushi.git"
+  },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjperez89/Pagina-Local-Sushi"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15"
+  }
 }
