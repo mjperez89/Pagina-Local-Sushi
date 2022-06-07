@@ -1,0 +1,529 @@
+/**
+ * ----------------------------------------
+ * Custom Reset
+ * ----------------------------------------
+ */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*** Remove focus for button, input, select, a ***/
+button, input, select, a{
+    &:focus, &:focus-visible{
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+/*** Hide Arrows From Input Number ***/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/**
+ * ----------------------------------------
+ * Body - Style
+ * ----------------------------------------
+ */
+
+$body_style: (
+    color: $main-font-color,
+    background-color: $main-bg-color
+);
+
+
+body{
+    color: map-get($body_style, color);
+    font-style: normal;
+    font-weight: $font-light;
+    font-size: 1rem;
+    font-family: $font-roboto;
+    background-color: map-get($body_style, background-color);
+    scrollbar-width: thin;
+    scrollbar-color: $color-red $color-fullred;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: $main-bg-color;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $color-red ;
+    border-radius: 6px;
+    border: 3px solid $color-fullred;
+}
+
+/**
+ * ----------------------------------------
+ * Colors class
+ * ----------------------------------------
+ */
+
+.colorPink{
+    color: $color-red;
+}
+
+.colorWhite{
+    color: $main-font-color;
+}
+
+
+/**
+ * ----------------------------------------
+ * Background colors
+ * ----------------------------------------
+ */
+
+.bg-red{
+    background-color: $color-red;
+}
+
+.bg-black{
+    background-color: $main-bg-color;
+}
+
+/**
+ * ----------------------------------------
+ * FONTS - generate fonts class 
+ * ----------------------------------------
+ */
+
+/**** FONTS ROBOTO *****/
+
+@each $k, $v in $font-weight-roboto {
+    .roboto-#{$k}{
+        font-family: $font-roboto;
+        font-weight: $v;
+    }
+}
+
+/**
+ * ----------------------------------------
+ * CUSTOM NAVBAR - Style
+ * ----------------------------------------
+ */
+
+.custom_cursor{
+    cursor: url(../assets/icons/cursor.png), auto;
+}
+
+/* Change background color */
+.navbar-custom {
+    @extend .custom_cursor;
+    background-color: $main-bg-color;
+    color: $main-font-color;
+    font-family: $font-roboto;
+}
+
+/* Change the brand and text color */
+.navbar-custom__brand{
+    &.navbar-brand, .navbar-text {
+        @extend .custom_cursor;
+        color: $main-font-color;
+    }
+}
+/* Change the link color */
+.navbar-custom__link{
+    & .navbar-nav .nav-link {
+        color: $main-font-color;
+        font-size: 1.2rem;
+    }
+}
+
+/* Change the color of active or hovered links */
+.navbar-custom__link--colorGold{
+    & .nav-item.active .nav-link, .nav-item:focus .nav-link, .nav-item:hover .nav-link {
+        @extend .custom_cursor;
+        color: $color-gold;
+    }
+}
+
+/* Change the color of toogler */
+.navbar-custom__toogler{
+    &.navbar-toggler {
+        i{
+            color: $color-gold;
+        }
+    }
+}
+
+/**
+ * ----------------------------------------
+ * Banner - Style
+ * ----------------------------------------
+ */
+
+.banner {
+    position: relative;
+    background-color: $main-bg-color;
+    color: $color-red;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner--img{
+    height: 20vh;
+    min-height: 18rem;
+}
+
+.banner--home{
+    height: 100vh;
+    min-height: 25rem;
+}
+
+.banner__img{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+}
+
+.banner__container{
+    position: relative;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.banner__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.banner__overlay--medium{
+    opacity: 0.5;
+}
+
+.banner__overlay--soft{
+    opacity: 0.2;
+}
+.banner__overlay--hard{
+    opacity: 0.7;
+}
+
+/**
+ * ----------------------------------------
+ * BACKGROUNDS - generate bg for banners
+ * ----------------------------------------
+ */
+
+$screen-size: (
+    "extra-small": 320px,
+    "medium": 768px,
+    "large": 1024px
+);
+
+@mixin backgroundImage ($name, $size) {
+    background-image: url("../assets/img/#{$name}-bgImage-#{$size}.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+//$pages: menus, Contact, Events, Reservations, Gallery, Banner;
+$pages: Banner;
+@each $screen, $size in $screen-size{
+   
+    @media all and (min-width: $size){
+        @each $v in $pages{
+            .background#{$v}{
+                @include backgroundImage(to-lower-case($v), $screen);
+            }
+        }
+    }
+
+}
+
+/**
+ * ----------------------------------------
+ * CardDeck - Media Query  
+ * ----------------------------------------
+ */
+
+/****  Prevents the carddeck from splitting into 2 lines ****/
+#cardDeckMQ{
+    @media all and (max-width: 906px ){
+
+        .card-deck {
+            justify-content: center;
+            .card {
+                min-width: 17rem; 
+                max-width: 26rem;
+            }
+        }
+    }
+}
+
+/**
+ * ----------------------------------------
+ * Home - Style 
+ * ----------------------------------------
+ */
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #080d15;
+    opacity: .3;
+}
+
+.logoHome {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.card-link{
+    font-size: 1.3rem;
+    font-family: $font-roboto;
+    font-weight: $font-semi-bold;
+    font-style: italic;
+    border: 2px solid $color-red;
+    text-align: center;
+    
+    a{
+        text-decoration: none;
+        color: $main-font-color;
+        &:hover{
+            color: $color-gold;
+            border-color: $color-red;
+        }
+    }
+}
+
+.card-size{
+    min-width: 12rem; 
+    max-width: 16rem;
+}
+
+/**
+ * ----------------------------------------
+ * Menu - Style 
+ * ----------------------------------------
+ */
+
+.menu{
+    color: $main-font-color;
+    background-color: $main-bg-color;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.menu__title{
+  font-weight: $font-bold;
+}
+
+.menu__description{
+    font-family: $font-roboto;
+}
+
+.menu--size{
+    min-width: 12rem; 
+    max-width: 16rem;
+}
+
+.menu--scale{
+
+    img{
+        transform: scale(1);
+        transition: all 300ms ease-in-out;
+        &:hover{
+            transform: scale(1.05);
+            z-index: 100; 
+        }
+    }
+}
+
+/**
+ * ----------------------------------------
+ * Events - Style 
+ * ----------------------------------------
+ */
+
+.event{
+    background-color: $main-bg-color;
+    color: $main-font-color;
+    font-size: 1.3rem;
+    font-family:$font-roboto;
+}
+
+.event__title{
+    font-size: 1.8rem;
+    font-family:$font-roboto;
+    font-weight: $font-regular;
+}
+
+.event__info{
+    font-size: 1rem;
+}
+
+.event__date{
+    min-width: 15rem;
+    max-width: 20rem;
+    font-size: 1.3rem;
+    font-family: $font-roboto;
+    font-weight: $font-semi-bold;
+    font-style: italic;
+    border: 2px solid $color-red;
+    text-align: center;
+
+    a{
+        text-decoration: none;
+        color: $main-font-color;
+        &:hover{
+            color: $color-gold;
+            border-color: $color-red;
+        }
+    }
+    i{
+        padding: 0 0.2em;
+    }
+}
+
+/**
+ * ----------------------------------------
+ * Gallery 
+ * ----------------------------------------
+ */
+
+ /**** Rotate the close button of the modal ****/  
+.rt90{
+    i{
+        &:hover{
+            animation: rotate-90 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        } 
+    }
+}
+
+/**
+ * ----------------------------------------
+ * Footer - Style
+ * ----------------------------------------
+ */
+
+.footer{
+    font-family: $font-roboto;
+    background-color: $main-bg-color;
+    color: $main-font-color;
+    p{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.footer__schedule{
+    background-color: $color-fullred;
+}
+
+.footer__socialMedia{
+    background-color: $color-fullred;
+    color: $main-font-color;
+    a{
+        color: $main-font-color;
+        &:hover{
+            color: $color-gold;
+        }
+    }
+}
+
+.footer__address{
+    background-color: $color-fullred;
+    color: $main-font-color;
+    font-size: 1rem;
+}
+
+.footer__goUp{
+    background-color: $main-bg-color;
+    a{
+        color:$main-font-color;
+        &:hover{
+            color:$color-gold;
+        }
+    }
+    p{
+        font-size: 0.6rem;
+    }
+}
+
+.footer--bgDark{
+    background-color: $main-bg-color;
+}
+
+.footer--bgGray{
+    background-color: $color-fullred;
+}
+
+/**
+ * ----------------------------------------
+ * Button - Style
+ * ----------------------------------------
+ */
+
+.button{
+    border: none;
+    color: $main-font-color;
+    padding: 5px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 2px 1px;
+    cursor: pointer;
+}
+
+.button--hover{
+    &:hover{
+        border: 2px solid $color-fullred;
+    }
+}
+
+.button--theme-purple{
+    background: $color-red;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid transparent;
+}
+
+
+/**
+ * ----------------------------------------
+ * Custom radio color. (Pink)
+ * ----------------------------------------
+ */
+
+.custom-radio .custom-control-input:checked~.custom-control-label::before{
+    background-color: $color-red;
+    border-color: $color-red;
+    box-shadow: none !important;
+}
+

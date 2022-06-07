@@ -208,13 +208,7 @@
    font-weight: 900; }
  
  /**
-  * ----------------------------------------
-  * CUSTOM NAVBAR - Style
-  * ----------------------------------------
-  */
- .custom_cursor, .navbar-custom, .navbar-custom__brand.navbar-brand, .navbar-custom__brand .navbar-text, .navbar-custom__link--colorGold .nav-item.active .nav-link, .navbar-custom__link--colorGold .nav-item:focus .nav-link, .navbar-custom__link--colorGold .nav-item:hover .nav-link {
-   cursor: url(../assets/icons/cursor.png), auto; }
- 
+  
  /* Change background color */
  .navbar-custom {
    background-color: #13151e;
